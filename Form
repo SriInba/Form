@@ -1,143 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<html>
+
+<head>
+    <title>form-page</title>
+</head>
+<h1><u>Sample Output:</u></h1>
+
+<h2>Figure 1. HTML form for user input</h2>
+<body>
     <style>
-      #main {
-        margin-left: 70px;
-      }
-
-      #title {
-        border: 1px solid black;
-        width: 600px;
-        font-weight: 70;
-        padding: 5px;
-      }
-      #radio {
-        position: relative;
-        left: 70px;
-      }
-      #check {
-        position: relative;
-        left: 70px;
-      }
-      #School {
-        position: relative;
-        top: 45px;
-      }
-      #extra {
-        position: relative;
-        top: 40px;
-      }
-      #last {
-        text-align: left;
-      }
-      #area {
-        position: relative;
-        left: 140px;
-        bottom: 130px;
-      }
-      #para {
-        position: relative;
-        bottom: 100px;
-      }
-      #files {
-        position: relative;
-        left: 140px;
-        bottom: 170px;
-      }
-      #but {
-        position: relative;
-        left: 130px;
-        bottom: 100px;
-      }
-      #one {
-        position: relative;
-        left: 30px;
-      }
-      #two {
-        position: relative;
-        left: 31px;
-      }
-      #three {
-        position: relative;
-        left: 53px;
-      }
+        .covered-box {
+            border: 2px solid black;
+            padding: 10px;
+            background-color: lightgray;
+            width: fit-content;
+        }
     </style>
-  </head>
-  <body>
-    <div id="main">
-      <h4>Sample Output:</h4>
-
-      <h4>Figure 1.HTML form for user input</h4>
-      <h4 id="title">BCS350 Assignment 3--Student name</h4>
-      <h4>Create your Profile</h4>
-      <form action="">
-        <label for="">First Name:</label>
-        <input type="text" id="one" />
-        <br />
-        <br />
-        <label for="">Last Name:</label>
-        <input type="text" id="two" />
-        <br />
-        <br />
-        <label for="">EmailID:</label>
-        <input type="text" id="three" />
-        <br />
-        <br />
-        <label for="">Class Standing:</label>
-        <select name="" id="">
-          <option value="">Freshman</option>
-          <option value="">Experienced</option>
-        </select>
-        <br />
-        <br />
-        <label for="" id="School">Schools</label>
-        <div id="radio">
-          <input type="radio" name="css" />
-          <label for="">School of Arts and Science</label>
-          <br />
-          <input type="radio" name="css" />
-          <label for="">School of Business</label>
-          <br />
-          <input type="radio" name="css" />
-          <label for="">School of Engineering Technology</label>
-          <br />
-          <input type="radio" name="css" />
-          <label for="">School of Health science</label>
-        </div>
-
-        <label for="" id="extra">Extra</label>
-        <div id="check">
-          <input type="Checkbox" />
-          <label for="">Veteran</label>
-          <br />
-          <input type="Checkbox" />
-          <label for="">Transfer Student</label>
-          <br />
-          <input type="Checkbox" />
-          <label for="">International student</label>
-        </div>
-        <br />
-        <br />
-        <p>
-          Program and <br />other <br />
-          information you <br />
-          like to share
-        </p>
-        <textarea name="" id="area" cols="30" rows="10"></textarea>
-        <p id="para">
-          Upload your <br />profile picture <br />(JPG,GIF,PNG <br />or TIF
-          file)
-        </p>
-        <input type="file" id="files" />
-      </form>
-      <div id="but">
-        <input type="submit" />
-        <input type="reset" />
-      </div>
+</head>
+<body>
+    <div class="covered-box">
+        <h3>BCS350 Assignment 3 -- Student Name</h3>
     </div>
-  </body>
+
+    <h2>Create Your Profile</h2>
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="classStanding">Class Standing:</label><br>
+        <select id="classStanding" name="classStanding">
+            <option value="freshman">Freshman</option>
+            <option value="junior">Junior</option>
+            <option value="senior">Senior</option>
+        </select><br><br>
+
+        <label>School:</label><br>
+        <input type="radio" id="arts" name="school" value="arts">
+        <label for="arts">School of Arts & Sciences</label><br>
+        <input type="radio" id="business" name="school" value="business">
+        <label for="business">School of Business</label><br>
+        <input type="radio" id="engineering" name="school" value="engineering">
+        <label for="engineering">School of Engineering Technology</label><br>
+        <input type="radio" id="health" name="school" value="health">
+        <label for="health">School of Health Sciences</label><br><br>
+
+        <label for="extra">Extra:</label><br>
+        <input type="checkbox" id="Veteran" name="extra" value="vet">
+        <label for="vet">Veteran</label><br>
+        <input type="checkbox" id="tra" name="extra" value="tra">
+        <label for="tra">Transfer Student</label><br>
+        <input type="checkbox" id="int" name="extra" value="int">
+        <label for="int">International Student</label><br><br>
+
+        <label for="information">Program and Other Information you like to share:</label><br>
+        <textarea id="information" name="information" rows="4" cols="50"></textarea><br><br>
+
+        <label for="profilePicture">Upload your profile picture (JPG, GIF, PNG or TIF File):</label><br>
+        <input type="file" id="profilePicture" name="profilePicture"><br><br>
+<br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+   
+</body>
+</html>
+        <input type="radio" id="health" name="school" value="health">
+        <label for="health">School of Health Sciences</label><br><br>
+
+        <label for="extra">Extra:</label><br>
+        <input type="checkbox" id="Veteran" name="extra" value="vet">
+        <label for="vet">Veteran</label><br>
+        <input type="checkbox" id="tra" name="extra" value="tra">
+        <label for="tra">Transfer Student</label><br>
+        <input type="checkbox" id="int" name="extra" value="int">
+        <label for="int">International Student</label><br><br>
+
+        <label for="information">Program and Other Information you like to share:</label><br>
+        <textarea id="information" name="information" rows="4" cols="50"></textarea><br><br>
+
+        <label for="profilePicture">Upload your profile picture (JPG, GIF, PNG or TIF File):</label><br>
+        <input type="file" id="profilePicture" name="profilePicture"><br><br>
+<br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+   
+</body>
 </html>
